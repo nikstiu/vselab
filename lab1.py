@@ -24,7 +24,7 @@ def spinner():
 
 
 def animate():
-    """Animate fidget spinner."""
+    """Animate fidget spinner4."""
     if state['turn'] > 0:
         state['turn'] -= 1
 
