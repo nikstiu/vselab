@@ -18,6 +18,8 @@ while(w1 := str(input('Введите слово: '))) !="stop":
 
 def p3():
     pass
+z = 0
+n = 0
 from random import randint
 while True:
         a = randint(1, 11)
@@ -30,9 +32,15 @@ while True:
                 break
         res = int(res)
         if a + b == res:
+            z+= 1
             print("Правильно!")
         else:
             print("Ответ неправильный ")
+            n += 1
+        if n == 3:
+            print("Игра закончена. Правильных ответов: ", z)
+            break
+p2(), p3()
 
 
 
