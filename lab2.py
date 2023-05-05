@@ -1,48 +1,44 @@
-def p1():
-    pass
-word = []
-while(words := str(input('Введите слово: '))) !="stop":
-    word.append(words)
-print (" ".join(word))
-
-
-
-def p2():
-    pass
-w1 = []
-while(w1 := str(input('Введите слово: '))) !="stop":
-    if "ф" in w1 or "Ф" in w1:
-        print("Ого, это редкое слово")
+def z1():
+    a = input("Введите пароль: ")
+    b = input("Введите пароль ещё раз: ")
+    if a == b:
+        print("Пароль принят")
     else:
-        print("Эх, это не очень редкое слово")
+        print("Пароль не принят")
+print(z1())
 
-def p3():
-    pass
-z = 0
-n = 0
-from random import randint
-while True:
-        a = randint(1, 11)
-        b = randint(1, 11)
-        print(f'{a} + {b} =', end='')
-        res = input()
-        while not res.isdigit() and res != "stop":
-            res = input()
-            if res == "stop":
-                break
-        res = int(res)
-        if a + b == res:
-            z+= 1
-            print("Правильно!")
-        else:
-            print("Ответ неправильный ")
-            n += 1
-        if n == 3:
-            print("Игра закончена. Правильных ответов: ", z)
-            break
-p2(), p3()
+def z2():
+    place = int(input("Введите номер вашего места: "))
+    if place % 2 == 0 and place < 54:
+        print ("Верхнее место")
+    if place % 2 != 0 and place < 54:
+        print ("Нижнее место")
+    if place >= 37 and place <= 54:
+        print ("Боковое место")
+    else:
+        print("Купе-место")
+print(z2())
 
+def z3():
+    year = int(input("Введите год: "))
+    if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+        print ("Год", year, "високосный")
+    else:
+        print ("Это год не високосный")
+print(z3())
 
+def z4():
+    colorone = input("Введите название первого цвета: ")
+    colortwo = input("Введите название второго цвета: ")
+    if (colorone == "красный" and colortwo == "синий") or (colorone == "синий" and colortwo == "красный"):
+        print("Получен фиолетовый цвет")
+    if (colorone == "красный" and colortwo == "желтый") or (colorone == "желтый" and colortwo == "красный"):
+        print("Получен оранжевый цвет")
+    if (colorone == "синий" and colortwo == "желтый") or (colorone == "желтый" and colortwo == "синий"):
+        print("Получен зелёный цвет")
+    else:
+        print("Невозможно смешать цвета")
+print(z4())
 
 
 
